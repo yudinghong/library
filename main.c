@@ -5,6 +5,7 @@
 
 int main(){
   int choice = 0;
+  
   while(1){
     cleanScreen();
     showMenu();

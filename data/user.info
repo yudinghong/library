@@ -1,0 +1,6 @@
+[admin_user]
+account=admin
+password=admin
+#[user]
+#account=test
+#password=test
