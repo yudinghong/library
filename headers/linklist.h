@@ -40,19 +40,23 @@
       delTarget->next = NULL;                                     \
       break;                                                      \
     }                                                             \
+    temp = temp->next;                                            \
   }                                                               \
 }
 
-// #define targetPrint(target, structType, format, ...)
-// {
-
-// }
-
-// #define search(head, structType, condition)
-// {
-//   PNode temp = head;
-//   while()
-// }
+// result must be a pointer
+#define search(head, result, structType, condition)               \
+{                                                                 \
+  PNode temp = head;                                              \
+  while(temp->next != NULL) {                                     \
+    temp = temp->next;                                            \
+    structType *data = containerOf(structType, temp, node);       \
+    if (condition){                                               \
+      result = data;                                              \
+      break;                                                      \
+    }                                                             \
+  }                                                               \
+}
 
 typedef struct linknode{
   struct linknode *next;
