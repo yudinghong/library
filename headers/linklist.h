@@ -1,9 +1,10 @@
 #ifndef _LINKLIST
 #define _LINKLIST
 
-#define initHead(head) \
-{                      \
-  head->next = NULL;   \
+#define initHead(head)                 \
+{                                      \
+  head = (PNode)malloc(sizeof(Node));  \
+  head->next = NULL;                   \
 }   
 
 #define containerOf(structType, pointer, member)                           \
